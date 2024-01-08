@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    color: white;
+}
+
+h1 {
+  color: #7F7FD5;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+}
+
+#toolbar {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  width: 70px;
+  background-color: #e4e7e9;
+}
+
+#toolbar * {
+  margin-bottom: 6px;
+}
+
+#toolbar label {
+  font-size: 12px;
+  color: #4a4ae5;
+  font-weight: bold;
+}
+
+#toolbar button {
+  background-color: rgb(106, 176, 193);
+  border: none;
+  border-radius: 4px;
+  color: rgb(192, 207, 214);
+  padding: 2px;
+}
+#toolbar .auto-clear {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ #stroke {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 2px solid #3792ed; /* Default border color */
+      margin-top: 10px;
+    }
+
