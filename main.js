@@ -9,6 +9,7 @@ canvas.width = window.innerWidth - canvasOffsetX;
 canvas.height = window.innerHeight - canvasOffsetY;
 
 let isPainting = false;
+let strokeColor = '#4eeb35';
 let lineWidth = 5;
 let autoclear = false;
 let autoClearAt = 0;
@@ -18,7 +19,7 @@ const draw = (e) => {
     return;
   }
   ctx.lineWidth = lineWidth;
-  ctx.strokeStyle = '#4eeb35';
+  ctx.strokeStyle = strokeColor;
   ctx.lineCap = 'round';
 
   ctx.lineTo(e.clientX - canvasOffsetX, e.clientY);
@@ -33,7 +34,7 @@ toolbar.addEventListener("click", e => {
 
 toolbar.addEventListener('change', e => {
   if(e.target.id === 'stroke') {
-    ctx.strokeStyle = e.target.value;
+    strokeColor = e.target.value;
   }
   if(e.target.id === 'lineWidth') {
     lineWidth = e.target.value;
